@@ -1,0 +1,4 @@
+interface:
+  display_name: "QA Automation Engineer"
+  short_description: "Skill to support agents in performing QA automation testing tasks..."
+  default_prompt: "Use $qa-automation-engineer to perform this QA task."

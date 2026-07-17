@@ -1,0 +1,47 @@
+# ==========================================================================
+# STEP 3: SYSTEM DISCOMPOSITION (Decomposition)
+# ==========================================================================
+# This is a standalone prompt — copy & paste to any AI
+# ==========================================================================
+# HOW TO USE:
+# 1. Send this prompt AFTER answering all the Q&A questions in Step 2
+#2. Customize decay hints if needed
+# 3. Review results → go to Step 4
+# ==========================================================================
+
+---START---
+
+It is assumed that the requirements have been clarified through the Q&A process in Step 2.
+
+Let's proceed to **Decompose** this feature into smaller Modules / Sub-modules for easier testing management.
+
+## Request output:
+
+### 1. Module Decomposition (Feature Mapping)
+
+Divide features into specific Modules and Sub-modules.
+
+[Suggested decay ranges (choose 1 or combine):
+- **According to UI cluster:** Header, Sidebar, Data Table, Input form, Popup, Dialog...
+- **According to task flow:** Create flow, Edit flow, Delete flow, Search flow...
+- **By subject:** User Management, Product Management, Order Management...]
+
+### 2. Function description
+
+For each Module/Sub-module, provide:
+- Module name (give a short, clear name)
+- Function description (1-2 sentences)
+- Main UI components (if any)
+
+### 3. Dependencies diagram (Dependencies)
+
+Indicates dependencies and data interactions between Modules:
+
+[Hint: For example:
+- Module "Data Table" displays data that depends on data from Module "Registration Form"
+- Module "Customer Details" depends on Module "Customer List"
+- Module "Export report" depends on data running Filter/Search...]
+
+---
+
+Present results using **Markdown**, can use table or tree diagram.

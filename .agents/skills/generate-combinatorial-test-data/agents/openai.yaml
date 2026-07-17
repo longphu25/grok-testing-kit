@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Combinatorial Test Data"
+  short_description: "Generate test data for multidimensional association matrices using pipeline..."
+  default_prompt: "Use $generate-combinatorial-test-data to perform this QA task."

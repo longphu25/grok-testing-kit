@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Automation Framework"
+  short_description: "Complete design and scaffold automation framework. Support..."
+  default_prompt: "Use $generate-automation-framework to perform this QA task."

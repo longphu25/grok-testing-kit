@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements Analyzer"
+  short_description: "Skills in website/module analysis and document generation Required..."
+  default_prompt: "Use $requirements-analyzer to perform this QA task."

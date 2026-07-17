@@ -1,0 +1,71 @@
+# ==========================================================================
+# STEP 6: VERIFICATION & OPTIMIZATION (Review & Refactoring)
+# ==========================================================================
+# Workflow: /generate-automation-from-testcases (continued)
+# Skill: /qa-automation-engineer
+# ==========================================================================
+# HOW TO USE:
+# 1. Send this prompt AFTER the test has run PASS in Step 5
+#2. AI will review and cleanup the code
+#3. Receive final code → merge into repository
+# ==========================================================================
+
+---START---
+
+Test ran **PASS** on personal computer. Before merging into the repository, review and optimize the code.
+
+## Refactoring Tasks:
+
+### 1. Delete debug artifacts
+
+- Delete everything`console.log`, `System.out.println`, `print()`generated when debugging
+- Delete commented code (`//`, `/* */`) is no longer used
+- Delete declared variables/locators that are not used (unused code)
+
+### 2. Check code quality
+
+- [ ] Are variable and method names clear?
+- [ ] Are there any methods that are too long and need to be split? (>20 lines)
+- [ ] Is there duplicate logic that needs to be extracted into a helper?
+- [ ] Is import statements clean?
+
+### 3. Check stability test
+
+- [ ] Did any hard sleep get through?
+- [ ] Are Assertions sufficient and accurate?
+- [ ] Is test data unique each time it is run?
+- [ ] Is each test case independent? (does not depend on other tests)
+
+### 4. CI/CD Readiness
+
+[Customize according to your framework:]
+
+Playwright:
+```typescript
+// Add tags for selective runs
+test.describe('Login Module', () => {
+  test.describe.configure({ mode: 'parallel' });
+  // ...
+});
+```
+
+Selenium/TestNG:
+```java
+@Test(groups = {"smoke", "regression"})
+public void testLoginSuccess() { ... }
+```
+
+Appium:
+```java
+@Test(groups = {"mobile", "regression"})
+public void testLoginMobile() { ... }
+```
+
+### 5. Documentation (optional)
+
+- Add descriptive comments for complex methods
+- Update README if there are changes to the project structure
+
+---
+
+Please return the **final, most complete** version of the code (Clean Code), ready to commit.

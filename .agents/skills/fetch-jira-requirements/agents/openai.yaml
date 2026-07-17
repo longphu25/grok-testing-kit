@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fetch Jira Requirements"
+  short_description: "Get Requirements / User Stories from Jira ticket and save as f..."
+  default_prompt: "Use $fetch-jira-requirements to perform this QA task."

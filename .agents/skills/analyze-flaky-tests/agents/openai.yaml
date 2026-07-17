@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Flaky Tests"
+  short_description: "Analyze flaky automation tests, identify risks..."
+  default_prompt: "Use $analyze-flaky-tests to perform this QA task."

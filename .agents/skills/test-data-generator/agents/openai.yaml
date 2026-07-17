@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Data Generator"
+  short_description: "Skill to generate structured, unique, traceable test data for automation..."
+  default_prompt: "Use $test-data-generator to perform this QA task."

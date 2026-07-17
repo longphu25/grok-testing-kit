@@ -1,0 +1,10 @@
+/generate-requirements-from-website
+
+#CONTEXT
+- System description: [Brief description of current system, current module]
+- Website URL: [URL_PAGE_WEB]
+- Module Name: [TEN_MODULE]
+- Login information: [EMAIL] and [PASSWORD]
+
+# OUTPUT FORMAT
+- Export the final result document to a Markdown file. (e.g. requirements/requirements_module_name.md)

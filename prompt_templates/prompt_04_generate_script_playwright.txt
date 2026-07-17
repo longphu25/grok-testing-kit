@@ -1,0 +1,43 @@
+/generate-automation-from-testcases
+
+# CONTEXT
+- Language: TypeScript
+- Test Framework: Playwright Test
+- Design Pattern: Page Object Model (POM)
+- Build tool: npm
+
+# SYSTEM
+- URL: [System URL]
+- Test account: [Use existing fixture / or EMAIL + PASSWORD]
+
+# PROJECT (choose 1 of 2)
+
+## A. Source code is available (EXISTING PROJECT)
+- Project path: [path/to/project]
+- Agent MUST read project structure, base classes, fixtures, config before generating code
+- Agent MUST comply with existing conventions (naming, folder, patterns)
+- Agent MUST reuse base classes, fixtures, utils — DO NOT duplicate
+- Agent MUST generate files in the correct location in the current project structure
+
+## B. No project yet (NEW PROJECT)
+- Agent self-scaffolds structure according to workflow`/generate-automation-framework`
+
+# TEST CASES
+[PASTE TEST CASES HERE — as a table or list of steps]
+
+For example:
+| TC ID | Title | Steps | Expected Result | Priorities |
+|---|---|---|---|---|
+| TC01 | Login successful | 1. Open the login page 2. Enter email 3. Enter password 4. Click Login | Dashboard displayed | P1 |
+
+# OUTPUT FORMAT
+- Page Object classes (Generate in the correct location & comply with naming convention)
+- Test classes (Using existing fixtures, structure Arrange → Act → Assert)
+- Utilities / Data Generators (Reuse existing utils or add if needed)
+- Artifact task.md (checklist of progress steps)
+- Test run results (PASS/FAIL summary - test must PASS 2 times in a row)
+
+# NOTES
+- The agent automatically opens the browser, inspects the UI, and collects locators from the actual DOM
+- Agent automatically runs test and auto-heal if FAIL (no user asked — Rule E3)
+- If there is an existing project: the agent reads the code first → complies with existing patterns

@@ -1,0 +1,61 @@
+# ==========================================================================
+# STEP 3: POM ARCHITECTURE DESIGN (POM Design)
+# ==========================================================================
+# Workflow: /generate-automation-from-testcases (continued)
+# Skill: /qa-automation-engineer
+# ==========================================================================
+# HOW TO USE:
+# 1. Send this prompt AFTER reviewing locators in Step 2
+# 2. AI will design the Page Objects class — NOT generate test scripts
+# 3. Review POM architecture → go to Step 4
+# ==========================================================================
+
+---START---
+
+Based on the list of locators **collected from the real DOM** in Step 2, design the **Page Object Model (POM)** ​​architecture.
+
+## Request:
+
+### 1. Definition of Class Page
+
+- Each page/section is a separate class
+- Class names have clear semantics
+- For example:`LoginPage`, `DashboardPage`, `CustomerFormPage`, `CustomerListPage`
+
+### 2. Declare Locators
+
+- Use the exact locators collected in Step 2
+- Prioritize solid selectors:`data-testid`, `id`, `name`, `role`
+- **Do not manually change** the locator from Step 2 unless there is a reason
+
+Playwright example:```typescript
+readonly emailInput = this.page.getByLabel('Email');
+readonly submitButton = this.page.getByRole('button', { name: 'Submit' });
+```
+
+Selenium example:```java
+private final By emailInput = By.id("email");
+private final By submitButton = By.cssSelector("button[data-testid='submit-btn']");
+```
+
+### 3. Packaging Methods
+
+- Name methods according to business actions (not technical)
+- Each method performs **1 action** clearly
+- Return`this`or Next Page (fluent pattern)
+
+```
+✅ CORRECT: fillCustomerForm(), submitAndVerifySuccess()
+❌ SAI:  clickButton(), inputText()
+```
+
+### 4. Important rule
+
+- ⛔ **Test script files have NOT been generated** — only designed Page classes
+- ✅ Outline the file structure, class names, locator declarations, method signatures
+- ✅ Can write body methods if the logic is clear
+- ✅ Compliance`.agents/rules/automation_rules.md` (naming conventions, POM structure)
+
+---
+
+Present the POM structure so I can review the architecture before generating test scripts in Step 5.

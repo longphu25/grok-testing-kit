@@ -1,0 +1,60 @@
+# ==========================================================================
+# STEP 4: ENSURE COVERAGE (Traceability & Gap Analysis)
+# ==========================================================================
+# This is a standalone prompt — copy & paste to any AI
+# ==========================================================================
+# HOW TO USE:
+# 1. Send this prompt AFTER reviewing the decomposition results in Step 3
+# 2. Review the list of scenarios AI generates
+# 3. Add more scenarios if missing
+# 4. Confirm completion → go to Step 5
+# ==========================================================================
+
+---START---
+
+From the Module decomposition results in Step 3, build a **Traceability Matrix** to ensure comprehensive coverage.
+
+## Mission:
+
+### 1. Traceability Mapping
+
+Map each Module/Sub-module or Logical Rule with an **Identification Request code**:
+- Format:`REQ-01`, `REQ-02`, `REQ-03`...
+- Each request must have a brief description
+
+Tabular presentation:
+| REQ ID | Modules | Description Requirements |
+|--------|--------|----------------|
+
+### 2. Gap Analysis (Check for shortcomings)
+
+Cross-check if any information in the original document is **missing** from the decomposition list:
+- Function has not been mapped
+- Entry conditions are not listed
+- Business Rules are omitted
+
+**If any deficiencies are detected, report them specifically.**
+
+### 3. High-Level Test Scenarios
+
+List test scenarios at **High-Level** level for each Module.
+
+Each scenario only needs **1 short core description**, focusing on:
+
+[Suggested focus (customized by project):
+- **Security / Decentralization:** Who is allowed to do what?
+- **UI Validation:** Required fields, data format, character limit
+- **Business Logic:** Calculation rules, transition states
+- **Data Integrity:** Is data consistent across modules?
+- **Error Handling:** How does the system handle errors?]
+
+Presentation format:
+| REQ ID | Modules | Scenario ID | Scenario Description |
+|--------|--------|-------------|-----------------|
+
+---
+
+⏸️ **AFTER COMPLETION**, please stop so I can review the list of scenarios.
+I will add or confirm to move to Step 5 to create detailed Test Cases.
+
+> ⚠️ **This is the Human Checkpoint.** Testers need to self-assess the risk for each Module before letting the AI ​​generate detailed scenarios.

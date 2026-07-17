@@ -1,0 +1,4 @@
+interface:
+  display_name: "Locator Healer Agent"
+  short_description: "Skill automatically detects and repairs broken locators when auto..."
+  default_prompt: "Use $locator-healer-agent to perform this QA task."

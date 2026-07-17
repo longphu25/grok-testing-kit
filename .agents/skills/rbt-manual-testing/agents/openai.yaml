@@ -1,0 +1,4 @@
+interface:
+  display_name: "RBT Manual Testing"
+  short_description: "Skill to generate manual test cases with 2 modes — QUICK (quick generation..."
+  default_prompt: "Use $rbt-manual-testing to perform this QA task."

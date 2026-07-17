@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Testcases From Requirements"
+  short_description: "Generate manual test cases quickly from requirements (QUICK mode — no..."
+  default_prompt: "Use $generate-testcases-from-requirements to perform this QA task."

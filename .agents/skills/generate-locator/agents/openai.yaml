@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Locator"
+  short_description: "Generate stable locator for UI element. Supports Playwright, Selenium..."
+  default_prompt: "Use $generate-locator to perform this QA task."

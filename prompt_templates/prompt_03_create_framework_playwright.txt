@@ -1,0 +1,23 @@
+/generate-automation-framework
+
+#CONTEXT
+I need to build E2E Web UI Automation Framework from scratch.
+- Technology: Playwright Test + TypeScript (Strict Mode)
+- Test Runner: @playwright/test
+- Report: HTML Report + Allure (optional)
+
+# SYSTEM
+- URL: [System URL]
+- Test account: [EMAIL] / [PASSWORD]
+
+# OUTPUT FORMAT
+- Setup package.json, tsconfig.json, playwright.config.ts
+- Deploy Base classes, Fixtures
+- Initialize Sample Page Object & Test
+- Configure Environment & Utilities
+- Set up CI/CD (GitHub Actions)
+- README.md instructions
+
+# NOTES
+- Agent self-scaffolds the ENTIRE project structure based on the original design at skill`/framework-architect`.
+- Agent self-verifies framework works (npm install + run example test).

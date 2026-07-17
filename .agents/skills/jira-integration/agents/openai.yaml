@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jira Integration"
+  short_description: "Jira/Xray integration skill — get requirements from Jira, validate..."
+  default_prompt: "Use $jira-integration to perform this QA task."

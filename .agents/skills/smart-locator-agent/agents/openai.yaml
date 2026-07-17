@@ -1,0 +1,4 @@
+interface:
+  display_name: "Smart Locator Agent"
+  short_description: "Stable and easy-to-maintain locator generation skill for UI automation, h..."
+  default_prompt: "Use $smart-locator-agent to perform this QA task."

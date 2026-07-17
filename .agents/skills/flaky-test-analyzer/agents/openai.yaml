@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flaky Test Analyzer"
+  short_description: "Skill to analyze and fix unstable automation tests..."
+  default_prompt: "Use $flaky-test-analyzer to perform this QA task."

@@ -1,0 +1,50 @@
+# ==========================================================================
+# STEP 6: STANDARDIZE THE FORMAT (Template Mapping)
+# ==========================================================================
+# This is a standalone prompt — copy & paste to any AI
+# ==========================================================================
+# HOW TO USE:
+# 1. Send this prompt AFTER reviewing Test Cases in Step 5
+#2. Customize TC ID rules if needed
+# 3. Copy the output table → paste into Excel/Jira/TestRail
+# ==========================================================================
+
+---START---
+
+This is the final step. Please **standardize the format** of all Test Cases generated in Step 5 into a standard Markdown table, suitable for copying/pasting to Excel or importing into Jira/Zephyr/Xray/TestRail.
+
+## The standard table needs the following columns:
+
+| TC ID | Module | Risk Level | Test Title | Pre-Condition | Test Steps | Expected Result | Priority | Test Data |
+
+## Rules when creating tables:
+
+### TC ID
+- Unified format:`[PROJECT]_[MODULE]_TC_[NUMBER]`
+- For example: `CRM_CUST_TC_001`, `CRM_CUST_TC_002`...
+- Continuously increasing, without jumping numbers
+
+[Customize: If you want a different ID rule, replace the format above.
+For example:`TC_LOGIN_001`, `TC_REG_001`...]
+
+### Test Steps & Expected Result
+- **MUST be numbered** if there are multiple steps
+- Use`<br>`or list`-`to break the line in the Markdown cell
+- Example in cell:```
+1. Open the Login page<br>2. Enter email: test@mail.com<br>3. Enter password: Test@123<br>4. Click the "Login" button
+  ```
+
+### ABSOLUTE RULES:
+- ❌ **DO NOT** omit or shorten any Test Cases generated in Step 5
+- ❌ **DO NOT** arbitrarily combine or merge different Test Cases
+- ✅ If the table is too long → Divide into **Part 1, Part 2, Part 3...** and ask me to continue
+
+---
+
+## Output
+
+Export the results as **Artifact** (file`.md`) so I can:
+- Copy the table directly into Excel/Google Sheets
+- Import into Jira/TestRail/Xray
+
+If total number of Test Cases > 30, divide the artifact into parts and ask me "Continue to Part X?" before giving birth again.

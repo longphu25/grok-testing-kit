@@ -1,0 +1,51 @@
+/generate-automation-from-testcases
+
+#CONTEXT
+- Framework: [Playwright / Selenium / Appium]
+- Language: [TypeScript / Java / Python]
+- Design Pattern: Page Object Model (POM)
+- Mode: FULL (self-inspect UI + generate code + run tests + auto-heal)
+
+# SYSTEM
+- URL: [Application URL]
+- Test account: [Use existing fixture/config / or EMAIL + PASSWORD]
+- Environment: [Dev / Staging / Production]
+
+# PROJECT (choose 1 of 2)
+
+## A. Source code is available (EXISTING PROJECT)
+- Project path: [path/to/project]
+- Agent MUST read project structure, base classes, fixtures, config before generating code
+- Agent MUST comply with existing conventions (naming, folder, patterns)
+- Agent MUST reuse base classes, fixtures, utils — DO NOT duplicate
+- Agent MUST generate files in the correct location in the current project structure
+
+## B. No project yet (NEW PROJECT)
+- Agent self-scaffolds structure according to workflow`/generate-automation-framework`
+
+# TEST CASES
+[One of 3 ways to provide test cases:]
+
+## Method 1: Paste directly
+| TC ID | Title | Steps | Expected Result | Priorities |
+|---|---|---|---|---|
+| TC01 | Login successful | 1. Open the login page 2. Enter a valid email 3. Enter a valid password 4. Click Login | Go to Dashboard | P1 |
+| TC02 | Login with wrong password | 1. Open the login page 2. Enter a valid email 3. Enter an incorrect password 4. Click Login | Show error message | P1 |
+
+## Method 2: File path
+File test cases: [path/to/testcases.md]
+
+## Method 3: URL (Google Sheets, Confluence)
+Test cases URL: [https://docs.google.com/spreadsheets/...]
+
+# OUTPUT FORMAT
+- Page Object classes (Generate code in the correct location according to conventions)
+- Test classes (Inherit an existing base or fixture, Arrange → Act → Assert)
+- Utilities / Data Generators (Reuse or new additions)
+- Artifact task.md (checklist of progress steps)
+- Test run results (PASS/FAIL summary - test must PASS 2 times in a row)
+
+# NOTES
+- Agent automatically opens browser inspect UI, collects actual locators
+- Agent automatically runs tests and auto-heal if FAIL (Rule E3)
+- If there is an existing project: the agent reads the code first → complies with existing patterns
